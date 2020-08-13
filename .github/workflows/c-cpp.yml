@@ -8,11 +8,12 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
+    - name: info
+      run: ./info
     - name: make
       run: make factorial
     - name: run
